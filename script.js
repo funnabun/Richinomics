@@ -1,16 +1,16 @@
 const methods = [
   {
-    title: "Freelancing Online",
+    title: "Get Started",
     description: "Offer skills like writing, design, or coding for pay.",
     details: "Websites like Upwork and Fiverr let you connect with clients worldwide. Start small and scale.",
   },
   {
-    title: "Dropshipping",
+    title: "About us",
     description: "Sell products without holding inventory.",
     details: "Use Shopify or WooCommerce with suppliers who ship directly to customers.",
   },
   {
-    title: "Affiliate Marketing",
+    title: "Join the discord server",
     description: "Earn commissions by promoting products.",
     details: "Sign up for affiliate programs (Amazon, ClickBank). Share links in blogs or videos.",
   },
