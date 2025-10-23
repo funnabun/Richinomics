@@ -1,17 +1,17 @@
 const methods = [
   {
     title: "Get Started",
-    description: "Offer skills like writing, design, or coding for pay.",
+    description: "Start your journey to lifelong wealth.",
     details: "Websites like Upwork and Fiverr let you connect with clients worldwide. Start small and scale.",
   },
   {
     title: "About us",
-    description: "Sell products without holding inventory.",
+    description: "What makes Richinomics what it is now?",
     details: "Use Shopify or WooCommerce with suppliers who ship directly to customers.",
   },
   {
     title: "Join the discord server",
-    description: "Earn commissions by promoting products.",
+    description: "Discord server includes more info, announcements, and updates.",
     details: "Sign up for affiliate programs (Amazon, ClickBank). Share links in blogs or videos.",
   },
 ];
