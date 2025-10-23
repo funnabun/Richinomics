@@ -13,6 +13,7 @@ const methods = [
     title: "Join the discord server",
     description: "Discord server includes more info, announcements, and updates.",
     details: "Sign up for affiliate programs (Amazon, ClickBank). Share links in blogs or videos.",
+    link: "https://discord.gg/yourserverlink" // <-- replace this with your real Discord invite link
   },
 ];
 
@@ -23,6 +24,7 @@ const modalTitle = document.getElementById("modal-title");
 const modalDetails = document.getElementById("modal-details");
 const closeModal = document.getElementById("close-modal");
 
+// render all cards
 function renderMethods(filtered = methods) {
   grid.innerHTML = "";
   filtered.forEach((m) => {
@@ -34,29 +36,18 @@ function renderMethods(filtered = methods) {
   });
 }
 
+// open modal or redirect
 function openModal(method) {
+  if (method.title === "Get Started") {
+    showPaymentGate();
+    return;
+  }
+
+  if (method.link) {
+    window.open(method.link, "_blank");
+    return;
+  }
+
   modalTitle.textContent = method.title;
   modalDetails.textContent = method.details;
-  modal.classList.remove("hidden");
-}
-
-closeModal.addEventListener("click", () => {
-  modal.classList.add("hidden");
-});
-
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) modal.classList.add("hidden");
-});
-
-searchInput.addEventListener("input", () => {
-  const query = searchInput.value.toLowerCase();
-  const filtered = methods.filter((m) =>
-    m.title.toLowerCase().includes(query)
-  );
-  renderMethods(filtered);
-});
-
-document.getElementById("year").textContent = new Date().getFullYear();
-
-renderMethods();
-
+  modal
